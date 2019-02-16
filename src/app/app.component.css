@@ -1,0 +1,62 @@
+.wrapper
+{
+    position: relative;
+    top: 0;
+    height: 100%;
+}
+
+.wrapper-login{
+    background-color: white;
+}
+
+/*.wrapper-loggedin{
+    background: #159957 !important; /* fallback for old browsers */
+  /*background: -webkit-linear-gradient(to right, #159957, #155799) !important; /* Chrome 10-25, Safari 5.1-6 */*/
+  /*background: linear-gradient(to right, #159957, #155799) !important; */
+/*}*/
+
+.appSidebar{
+	
+	z-index: 5;
+	height: 100%;
+	width: 100%;
+	background-color: #2e69a9;
+	position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 260px;
+    display: block;
+    -webkit-transition: width 2s;
+    -moz-transition: width 2s;
+    -ms-transition: width 2s;
+    -o-transition: width 2s;
+    transition: width 2s;
+    transition-timing-function: ease;
+}
+
+.appNavbar{
+	position: absolute;
+	width: 100%;
+	
+}
+
+.main-panel
+{
+    	background: rgba(203, 203, 210, 0.15);
+        position: relative;
+        float: right;
+        width: calc(100% - 260px);
+}
+
+.appSidebarHide
+{
+    width: 0px !important;
+    display: none;
+    -webkit-transition: width 2s;
+    -moz-transition: width 2s;
+    -ms-transition: width 2s;
+    -o-transition: width 2s;
+    transition: width 2s;
+    transition-timing-function: ease;
+}
