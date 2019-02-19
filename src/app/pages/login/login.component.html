@@ -1,0 +1,71 @@
+<div class="content">
+  <div class="container">
+      <div class="col-md-6 col-md-4 ml-auto mr-auto">
+        <form class="form login-form" method="POST" [formGroup]="loginForm" (ngSubmit)="onSubmit()" novalidate autocomplete="off">
+          <div class="card card-login">
+            <div class="card-header text-center">
+              <label class="form-label">
+              LOGIN
+              </label>
+            </div>
+            <div class="card-body">
+              <div class="form-group" style="margin-top: 2%;">
+                <label class="form-label">User ID:</label>
+                <div class="row form-input-row" tabindex="1">
+                  <div class="col-md-1 no-padding text-center">
+                    <i class="fa fas fa-user-secret" style="padding-top: 40%;"></i>
+                  </div>
+                  <div class="col-md-11 no-padding">
+                    <input type="text" class="form-control no-border no-padding" formControlName="userId" required>
+                    <!-- <div class="">
+                      <i class="fa fas fa-frown-o"></i>
+                      <i class="far fa-meh-rolling-eyes "></i>
+                      <label class="form-error"> User Id not Available!</label>
+                    </div> -->
+                    <div *ngIf="submitted && f.userId.errors">
+                      <div *ngIf="f.userId.errors.required">
+                      <i class="fa fas fa-frown-o"></i>
+                      <label class="form-error">Password is required!</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" style="margin-top: 6%;">
+                <label class="form-label" >Password:</label>
+                <div class="row form-input-row" tabindex="1">
+                  <div class="col-md-1 no-padding text-center">
+                    <i class="fa fas fa-key" style="padding-top: 40%;"></i>
+                  </div>
+                  <div class="col-md-10 no-padding">
+                    <input [type]="show ? 'text' : 'Password'" class="form-control no-border no-padding" formControlName="pass" required>
+                    <!-- <div class="">
+                      <i class="fa fas fa-frown-o"></i>
+                      <label class="form-error">Wrong Password!</label>
+                    </div> -->
+                    <div *ngIf="submitted && f.pass.errors">
+                      <div *ngIf="f.pass.errors.required">
+                      <i class="fa fas fa-frown-o pt-3"></i>
+                      <label class="form-error">Password is required!</label>
+                    </div>
+                    </div>
+                  </div>
+                  <div class="col-md-1 no-padding">
+                    <button  type="button" (click)="changeType()" class="btn float-right no-padding" style="width: 100%;height: 100%">
+                    <i class="fa fa-eye"></i>
+                    </button>
+                    <!-- call the show password things -->
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+            <div class="card-footer">
+              <button  type="button" class="btn btn-primary float-left">Forgot Password</button>
+              <button type="submit" [disabled]="loginForm.invalid" class="btn btn-primary float-right">Login</button>
+            </div>
+          </div>
+        </form>
+      </div> 
+  </div>
+</div>

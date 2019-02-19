@@ -1,0 +1,29 @@
+.sidebar-Wrapper{
+    height: 100%;
+    background-color: #2e69a9;
+    max-height: calc(100vh - 75px);
+    min-height: 100%;
+    width: 260px;
+    max-width: 100%;
+    padding: 0px;
+}
+
+.sidebar-list{
+    background-color: #f7f7f8;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+    margin-top: 5%;
+    height: 35px;
+    text-align: center;
+    list-style: none;
+}
+
+.img-icon{
+	width: 50px;
+	margin-left: 37%;
+}
+
+.sidebarpad{
+    padding-left: 5px;
+    padding-right: 5px;
+}

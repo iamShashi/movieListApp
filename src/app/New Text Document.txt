@@ -1,0 +1,98 @@
+<div class="row" *ngFor="let movie of mov4;">
+    			<!-- {{movie.Title}} -->
+    			<!-- for index i -->
+    			<div class="col-md-3">
+    				<div class="card">
+    					<img [src]="movie.Poster">
+    					<div *ngIf="movie">
+    						<div class="card-header">
+	    						<div class="card-title">
+	    							{{movie.Title}}
+	    						</div>
+	    						<div class="card-body">
+	    							<p class="card-text">
+	    								{{movie.Production}}
+	    							</p>
+	    						</div>
+	    						<div class="card-footer">
+	    							<p>
+	    								{{movie.imdbRating}}
+	    							</p>
+	    						</div>
+    						</div>
+    					</div>
+    				</div>
+    			</div>
+
+    			<!-- for index i+1 -->
+    			<div class="col-md-3">
+    				<div class="card">
+    					<img [src]="movie.Poster">
+    					<div *ngIf="movie">
+    						<div class="card-header">
+	    						<div class="card-title">
+	    							{{movie.Title}}
+	    						</div>
+	    						<div class="card-body">
+	    							<p class="card-text">
+	    								{{movie.Production}}
+	    							</p>
+	    						</div>
+	    						<div class="card-footer">
+	    							<p>
+	    								{{movie.imdbRating}}
+	    							</p>
+	    						</div>
+    						</div>
+    					</div>
+    				</div>
+    			</div>
+
+    			<!-- for index i+2 -->
+    			<div class="col-md-3">
+    				<div class="card">
+    					<img [src]="movie.Poster" alt="space for image">
+    					<div *ngIf="movie">
+    						<div class="card-header">
+	    						<div class="card-title">
+	    							{{movie.Title}}
+	    						</div>
+	    						<div class="card-body">
+	    							<p class="card-text">
+	    								{{movie.Production}}
+	    							</p>
+	    						</div>
+	    						<div class="card-footer">
+	    							<p>
+	    								{{movie.imdbRating}}
+	    							</p>
+	    						</div>
+    						</div>
+    					</div>
+    				</div>
+    			</div>
+
+    			<!-- for index i+3 -->
+    			<div class="col-md-3">
+    				<div class="card">
+    					<img [src]="movie.Poster" alt="space for image">
+    					<div *ngIf="movie">
+    						<div class="card-header">
+	    						<div class="card-title">
+	    							{{movie.Title}}
+	    						</div>
+	    						<div class="card-body">
+	    							<p class="card-text">
+	    								{{movie.Production}}
+	    							</p>
+	    						</div>
+	    						<div class="card-footer">
+	    							<p>
+	    								{{movie.imdbRating}}
+	    							</p>
+	    						</div>
+    						</div>
+    					</div>
+    				</div>
+    			</div>
+    		</div>

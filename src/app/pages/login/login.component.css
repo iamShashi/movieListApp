@@ -1,0 +1,36 @@
+.login-form{
+	box-shadow: 8px 8px 2px -3px rgba(84, 74, 74, 0.15)
+}
+
+.form-input-row{
+	border: 1px solid #ced4da !important;
+    border-radius: .25rem !important;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out !important;
+    margin: 3px !important;
+}
+
+.no-padding{
+	padding: 0px !important;
+}
+
+.no-border{
+	border: 0px !important;
+}
+
+.form-input-row:hover {
+    color: #495057;
+    background-color: #fff;
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+.form-control:focus{
+	box-shadow: none !important;
+}
+
+
+.form-label{
+    font-weight: 600;
+    font-size: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.45);
+}

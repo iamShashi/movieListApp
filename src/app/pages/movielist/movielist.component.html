@@ -1,0 +1,144 @@
+
+<div class="container-fluid">
+
+    <div class="content">
+    	<!-- for outer loop over movie List -->
+    	
+    				<div class="parallax" [ngStyle]="{'background-image':'url(' + makeCover + ')'}" style="margin-top: -10%;" >
+    				</div>
+
+    				<div class="parallax" [ngStyle]="{'background-image':'url(' + makeCoverSecond + ')'}" style="top: 25%;height: 25%;">
+    					<!-- <img [src]="(movies[0].backdrop_path)"> -->
+    				</div>
+    				<div class="parallax" [ngStyle]="{'background-image':'url(' + makeCoverthird + ')'}" style="top: 50%;height: 25%;">
+    					<!-- <img [src]="(movies[0].backdrop_path)"> -->
+    				</div>
+    				<div class="parallax" [ngStyle]="{'background-image':'url(' + makeCoverFourth + ')'}" style="top: 75%;height: 25%;">
+    					<!-- <img [src]="(movies[0].backdrop_path)"> -->
+    				</div>
+    	<!-- {{records}} -->
+    	<!-- <div *ngFor ="let i of Arr(num).fill(1)" > -->
+    		<!-- <div class="row" *ngFor="let movie of movies;let i = index"> -->
+    			<!-- {{movie.Title}} -->
+    			<!-- for index i -->
+    			<!-- <div  > -->
+    				
+    			<div  *ngFor="let mov of movies | paginate: { itemsPerPage: 10, currentPage: currentPagep, totalItems: totalpages } ;let j = index " class="mb-4 col-md-3 mov-list-div">
+    				<div class="card card-mov" (click)="navDetails(mov.id)" (mouseenter)="showThis(j)" (mouseleave)="hideThis(j)">
+    					<img [src]="(mov.poster_path)" class="imgResize">
+    					<div class="card-header card-mov-header">
+	    						<div class="card-title mov-title">
+	    							{{mov.title}}
+	    						</div>
+	    				</div>
+    					<div *ngIf="mov.video" class="abc">
+    						<div class="">
+	    						<div class="card-body">
+	    							<p class="card-text">
+	    								Title: {{mov.title}}
+	    							</p>
+	    							<p class="card-text">
+	    								IMDB: {{mov.vote_average}}
+	    							</p>
+	    						</div>
+	    						<div class="card-footer">
+	    							<p>
+	    								Released: {{mov.release_date}}
+	    							</p>
+	    						</div>
+    						</div>
+    					</div>
+    				</div>
+    			</div>
+    			<pagination-controls (pageChange)="changePage(currentPagep)"></pagination-controls>
+    			<!-- for index i+1 -->
+    			<!-- <div class="col-md-3" (mouseover)="showThis(i,j)" (mouseout)="hideThis(i,j)">
+    				<div class="card">
+    					<img [src]="mov.Poster">
+    					<div class="card-header">
+	    						<div class="card-title">
+	    							{{mov.Title}}
+	    						</div>
+	    				</div>
+    					<div *ngIf="movie" class="abc">
+    						<div class="">
+	    						<div class="card-body">
+	    							<p class="card-text">
+	    								{{mov.Actors}}
+	    							</p>
+	    							<p class="card-text">
+	    								{{mov.Production}}
+	    							</p>
+	    						</div>
+	    						<div class="card-footer">
+	    							<p>
+	    								IMDB: {{mov.imdbRating}}
+	    							</p>
+	    						</div>
+    						</div>
+    					</div>
+    				</div>
+    			</div> -->
+
+    			<!-- for index i+2 -->
+    			<!-- <div class="col-md-3" (mouseover)="showThis(i,j)" (mouseout)="hideThis(i,j)">
+    				<div class="card">
+    					<img [src]="mov.Poster" alt="space for image">
+    					<div class="card-header">
+	    						<div class="card-title">
+	    							{{mov.Title}}
+	    						</div>
+	    				</div>
+    					<div *ngIf="movie" class="abc">
+    						<div class="">
+	    						<div class="card-body">
+	    							<p class="card-text">
+	    								{{mov.Actors}}
+	    							</p>
+	    							<p class="card-text">
+	    								{{mov.Production}}
+	    							</p>
+	    						</div>
+	    						<div class="card-footer">
+	    							<p>
+	    								IMDB: {{mov.imdbRating}}
+	    							</p>
+	    						</div>
+    						</div>
+    					</div>
+    				</div>
+    			</div> -->
+
+    			<!-- for index i+3 -->
+    			<!-- <div class="col-md-3" (mouseover)="showThis(i,j)" (mouseout)="hideThis(i,j)">
+    				<div class="card">
+    					<img [src]="mov.Poster" alt="space for image">
+    					<div class="card-header">
+	    						<div class="card-title">
+	    							{{mov.Title}}
+	    						</div>
+	    				</div>
+    					<div *ngIf="mov" class="abc">
+    						<div class="">
+	    						<div class="card-body">
+	    							<p class="card-text">
+	    								{{mov.Actors}}
+	    							</p>
+	    							<p class="card-text">
+	    								{{mov.Production}}
+	    							</p>
+	    						</div>
+	    						<div class="card-footer">
+	    							<p>
+	    								IMDB: {{mov.imdbRating}}
+	    							</p>
+	    						</div>
+    						</div>
+    					</div>
+    				</div>
+    			</div> -->
+    		<!-- </div> -->
+    		<!-- </div> -->
+    	<!-- </div> -->
+    </div> 
+</div>
