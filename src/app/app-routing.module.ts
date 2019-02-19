@@ -25,7 +25,7 @@ const routes : Routes = [
 		pathMatch: 'full'
 	},
 	{
-		path:'movie-details/:tt',
+		path:'movie-details',
 		component: MoviepreviewComponent,
 		resolve : { loginRequired : LoginResolver }
 	},
