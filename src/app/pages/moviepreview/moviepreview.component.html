@@ -1,11 +1,45 @@
-<div class="card content">
-	<div class="card-title">
-		Movie
+<div class="content" [ngStyle]="{'background-color': '#47484a5e'}" style="position: relative;min-height: 100vh">
+	<div class="parallax" [ngStyle]="{'background-image':'url(' + movieCover + ')'}" style="margin-top: -79px;height: 600px;margin-left: -3%;" >
+    				</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-10 col-sm-6 mov-list-div">
+					<div class="card-body">
+						<div class="card card-mov" >
+	    					<img [src]="(moviePoster)" class="imgResize">
+	    					<div class="card-footer card-mov-header">
+
+		    							{{records.title}}
+		    						
+		    				</div>
+	    				</div>
+					</div>
+			</div>
+			<div class="col-xs-10 col-sm-14">
+				<div class="card-body">
+					<div class="card-title">
+						<h1 style="color:white;">{{records.title}}</h1>
+						<h2 style="color:white;font-size: 1.2rem;">Released: {{records.release_date}}</h2>
+						<h2 style="color:white;font-size: 1.2rem;"><span *ngFor = "let genre of records.genres">{{genre.name}}/</span></h2>
+					</div>
+					<div style="margin-top: 5%;"><h3 style="color: white;font-size: 1.2rem;">Vote <i class="fa fas fa-heart"></i> : {{records.vote_count}}</h3></div>
+					<div style="margin-top: 2%;"><h3 style="color: white;font-size:1.2rem;">IMDB Rating <i class="fa fab fa-imdb" style="font-size: 2rem;"></i> : {{records.vote_average}}</h3></div>
+					<div style="margin-top: 2%;"><h3 style="color: white;font-size: 1.2rem;"><i class="fa fas fa-money" style="font-size:2rem;"></i> Budget : {{records.budget}}</h3></div>
+					<div style="margin-top: 2%;"><h3 style="color: white;font-size:1.2rem;"><i class="fa fas fa-dollar" style="font-size:2rem;"></i> Revenue : {{records.revenue}}</h3></div>
+				</div>
+			</div>
+		</div>
 	</div>
-	<div class="card-body">
-		Movie Details
-	</div>
-	<div class="card-footer">
-		Movie Details
+	<div class="container">
+		<div class="row" style="margin-left: 5%;">
+			<ng-container  *ngFor = "let item of records.production_companies">
+				<div class="col-xs-10" *ngIf="item.logo_path" style="padding-right: 10%">
+					<img src="{{'https://image.tmdb.org/t/p/w185' + item.logo_path}}" style="height: 50px;">
+				</div>
+			</ng-container>
+		</div>		
 	</div>
 </div>
+<div class="card-footer card-footer-prev text-center">
+		<p style="font-size:1.1rem;font-weight: 500;">Copyrights Reserved <i class="fa far fa-copyright"></i></p>
+	</div>

@@ -14,7 +14,12 @@ import { AppComponent } from '../../app.component';
 export class MoviepreviewComponent implements OnInit {
 
 	movieData: Observable<movieDetail>;
+  public records = {
+    
+  };
   titleId = "";
+  moviePoster = "";
+  movieCover = "";
   constructor(
   	public router : Router,
   	public route : ActivatedRoute,
@@ -32,7 +37,12 @@ export class MoviepreviewComponent implements OnInit {
     this.titleId = this.route.snapshot.params.tt;
     this.fetchDetailService.getMovie(this.titleId).subscribe(data=>{
       console.log(data);
-      this.appComp.togglePageloader(false);
+      
+       this.records = data;
+       this.moviePoster = "https://image.tmdb.org/t/p/w185" + data.poster_path;
+       this.movieCover = "https://image.tmdb.org/t/p/w1280" + data.backdrop_path;
+       
+       this.appComp.togglePageloader(false);
       // this.movieData. = data;
     });
   }
